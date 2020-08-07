@@ -1,1 +1,1 @@
-console.log('I WORK!');
+export let test = console.log('card it');
