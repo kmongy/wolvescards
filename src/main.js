@@ -1,14 +1,12 @@
 import '/scss/main.scss';
 import logoURL from '/assets/imgs/timberwolvesLogo.png';
-import katURL from '/assets/imgs/kat1.jpg';
-import dRussURL from '/assets/imgs/diangelo1.jpg';
 
 import { stats } from './stats.js';
 
 const cardsContainer = document.querySelector('.cards-container');
+const playerInfo = stats;
 
-function addPlayerCardInfo() {
-  const playerInfo = stats;
+function addPlayerCardDOM() {
   playerInfo.forEach((player) => {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('card');
@@ -27,22 +25,34 @@ function addPlayerCardInfo() {
         <div class="back">
           <div class="back-inner">
             <div class="back-player-stats">
-              <p>STATS</p>
+              <p>2019-2020 Season</p>
+              <ul>
+                <li class="pts">Pts: ${player.avgPts}</li>
+                <li class="pts">Rbds: ${player.avgRbds}</li>
+                <li class="pts">Ast: ${player.avgAst}</li>
+                <li class="pts">FG%: ${player.fgPercentage}</li>
+                <li class="pts">3P%: ${player.threeP}</li>
+                <li class="pts">FT%: ${player.ft}</li>
+                <li class="pts">Stl: ${player.stl}</li>
+                <li class="pts">Blk: ${player.blk}</li>
+                <li class="pts">GP: ${player.gp}</li>
+              </ul>
             </div>
           </div>
         </div>
     `;
 
     cardsContainer.appendChild(cardDiv);
-
-    const frontPlayerImg = document.querySelectorAll('.front-player-img');
-    frontPlayerImg.forEach(
-      (img) =>
-        (img.style.background = `"url(assets/imgs/kat1.jpg) center no-repeat;"`)
-    );
   });
+  addBackgroundImg();
 }
-addPlayerCardInfo();
+addPlayerCardDOM();
+
+function addBackgroundImg() {
+  const cardDOMSelection = document.querySelectorAll('.front-player-img');
+  const cardSelection = [...cardDOMSelection];
+  console.log(cardSelection);
+}
 
 const cards = document.querySelectorAll('.card');
 
