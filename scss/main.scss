@@ -18,6 +18,12 @@ h1 {
   text-align: center;
   padding: 1rem 0;
 }
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
@@ -55,17 +61,23 @@ h1 {
     z-index: 2;
     transform: rotateY(0deg);
   }
+  & .front-img-container {
+    background: $wolves-green;
+    position: absolute;
+    width: 100%;
+    height: 490px;
+    overflow: hidden;
+
+    .front-player-img {
+      width: 100%;
+    }
+  }
   .front-inner {
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 10;
   }
-
-  // .front-player-img {
-  //   background: url(https://www.totalprosports.com/wp-content/uploads/2016/11/karl-anthony-towns.jpg)
-  //     center no-repeat;
-  //   background-size: cover;
-  // }
   .front-player-info {
     background: $wolves-dark-blue;
     color: $wolves-green;
@@ -84,6 +96,10 @@ h1 {
     p {
       letter-spacing: 8px;
     }
+    .player-position {
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+    }
   }
 
   .logo {
@@ -97,5 +113,26 @@ h1 {
 
   & .back {
     transform: rotateY(180deg);
+
+    .back-player-stats {
+      p {
+        font-size: 0.9rem;
+        color: $wolves-dark-blue;
+      }
+      ul {
+        position: absolute;
+        bottom: 0;
+        border: 2px solid $wolves-light-blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+
+        li {
+          margin: 1rem 0;
+        }
+      }
+    }
   }
 }
