@@ -14,6 +14,8 @@ export const stats = [
     gp: 35,
     thumbnail:
       'https://steamuserimages-a.akamaihd.net/ugc/849341077191280473/86217F33E5E03A0F91C4C6AC49553574405D1ECC/',
+    thumbnail2:
+      'https://zonecoverage.com/wp-content/uploads/2018/11/USATSI_11666065-1024x682.jpg',
   },
   {
     playerName: "D'Angelo Russell",
@@ -30,6 +32,8 @@ export const stats = [
     gp: 45,
     thumbnail:
       'https://bloximages.chicago2.vip.townnews.com/winonadailynews.com/content/tncms/assets/v3/editorial/0/72/07207469-6a6e-57d4-a3b9-b52431547a80/5e557059ed0ba.image.jpg?resize=500%2C750',
+    thumbnail2:
+      'https://sports.inquirer.net/files/2020/02/AP20058137759180.jpg',
   },
   {
     playerName: 'Jarret Culver',
@@ -46,6 +50,8 @@ export const stats = [
     gp: 63,
     thumbnail:
       'https://media.gettyimages.com/photos/jarrett-culver-of-the-minnesota-timberwolves-is-defended-by-dj-of-picture-id1204086754',
+    thumbnail2:
+      'https://imagesvc.timeincapp.com/v3/fan/image?url=https://dunkingwithwolves.com/wp-content/uploads/getty-images/2017/07/1180539656.jpeg&c=sc&w=3200&h=2160',
   },
   {
     playerName: 'Juancho Hernangomez',
@@ -62,6 +68,8 @@ export const stats = [
     gp: 48,
     thumbnail:
       'https://www.mavs.com/wp-content/uploads/2020/02/GettyImages-1203031492-475x475.jpg',
+    thumbnail2:
+      'https://www.explica.co/wp-content/uploads/2020/05/juancho-hernangomez-timberwolves.png',
   },
   {
     playerName: 'Jake Layman',
@@ -78,5 +86,7 @@ export const stats = [
     gp: 23,
     thumbnail:
       'https://www.nba.com/timberwolves/sites/timberwolves/files/gettyimages-1208490583.jpg',
+    thumbnail2:
+      'https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fdunkingwithwolves.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F1187252828-850x560.jpeg',
   },
 ];

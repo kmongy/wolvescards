@@ -12,7 +12,7 @@ function addPlayerCardDOM() {
     cardDiv.classList.add('card');
     cardDiv.innerHTML = `
     <div class="front">
-      <div class="front-img-container">
+      <div class="img-container">
         <img class="front-player-img" src="${player.thumbnail}" alt="${player.playerName}">
       </div>
       <div class="front-inner">
@@ -29,9 +29,11 @@ function addPlayerCardDOM() {
     <div class="back">
       <div class="back-inner">
         <div class="back-player-stats">
-          <p>2019-2020 Season</p>
+          <div class="img-container">
+            <img class="back-player-img" src="${player.thumbnail2}" alt="${player.playerName}">
+          </div>
+          <p class="back-season">2019-2020 SEASON</p>
           <ul>
-            <p>Stats</p>
             <div class="stats-row">
               <li class="pts">Pts: ${player.avgPts}</li>
               <li class="pts">Rbds: ${player.avgRbds}</li>
@@ -55,15 +57,8 @@ function addPlayerCardDOM() {
 
     cardsContainer.appendChild(cardDiv);
   });
-  addBackgroundImg();
 }
 addPlayerCardDOM();
-
-function addBackgroundImg() {
-  const cardDOMSelection = document.querySelectorAll('.front-player-img');
-  const cardSelection = [...cardDOMSelection];
-  console.log(cardSelection);
-}
 
 const cards = document.querySelectorAll('.card');
 

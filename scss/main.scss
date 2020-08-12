@@ -12,11 +12,17 @@ html {
 }
 body {
   font-family: $oswald;
+  color: $wolves-dark-blue;
   padding: 2rem 1rem;
 }
-h1 {
+h1,
+h2 {
   text-align: center;
   padding: 1rem 0;
+}
+h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
 }
 ul,
 li {
@@ -61,17 +67,6 @@ li {
     z-index: 2;
     transform: rotateY(0deg);
   }
-  & .front-img-container {
-    background: $wolves-green;
-    position: absolute;
-    width: 100%;
-    height: 490px;
-    overflow: hidden;
-
-    .front-player-img {
-      width: 100%;
-    }
-  }
   .front-inner {
     position: relative;
     width: 100%;
@@ -102,6 +97,23 @@ li {
     }
   }
 
+  .img-container {
+    background: $wolves-green;
+    position: absolute;
+    width: 100%;
+    max-height: 490px;
+    overflow: hidden;
+
+    .front-player-img {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .back-player-img {
+      width: 100%;
+    }
+  }
+
   .logo {
     width: 80px;
     padding: 0.5rem;
@@ -113,24 +125,48 @@ li {
 
   & .back {
     transform: rotateY(180deg);
+    background: white;
 
     .back-player-stats {
+      display: flex;
+      flex-direction: column;
+
       p {
         font-size: 0.9rem;
+        font-weight: 700;
         color: $wolves-dark-blue;
+        z-index: 100;
+      }
+      .back-season {
+        background: $wolves-green;
+        border-left: 4px solid $wolves-light-blue;
+        border-right: 4px solid $wolves-light-blue;
+        border-top: 4px solid $wolves-light-blue;
+        text-align: center;
+        position: absolute;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 1.5rem 0;
+        top: 50%;
+      }
+      .stats-row {
+        width: 100%;
       }
       ul {
         position: absolute;
         bottom: 0;
-        border: 2px solid $wolves-light-blue;
+        border: 4px solid $wolves-light-blue;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
         width: 100%;
+        height: 35%;
 
         li {
-          margin: 1rem 0;
+          margin: 1.5rem 0;
+          border-bottom: 2px solid $wolves-dark-blue;
+          text-align: center;
         }
       }
     }
